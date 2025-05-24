@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senex Burger</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./styles/output.css" rel="stylesheet" />
+
+</head>
+<body class="bg-[#f6f7f8]">
+  <!-- HEADER -->
+  <header class="relative w-full h-[420px] bg-home bg-cover bg-center">
+
+  <!-- overlay escuro -->
+  <div class="absolute inset-0 bg-zinc-900/20 z-0"></div>
+
+  <!-- conteúdo -->
+
+  
+  <div class="relative z-10 w-full h-full flex flex-col justify-center items-center  text-white">
+    <img
+      src="./assets/Log/log.avif"
+      alt="logo Senex Burger"
+      class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+    />
+
+    <h1 class="text-5xl mt-4 mb-2 font-bold ">Senex Burger</h1>
+
+    <span class="font-medium text-center px-4 ">
+      Foodtruck Rua Jaceguai, n7 (Pça Varnhagen).
+    </span>
+    <div class="bg-green-600 px-4 py-1 rounded-lg font-medium" id="date-span" >
+        <span>  4ª  a dom 19:00 às 01:00 </span>
+    </div>
+
+    <span class="font-medium text-center px-4  mt-4 ">
+      As 3ª no Ed Ventura - Av. República do Chile 330.
+    </span>
+      
+    <div class="bg-green-600 px-4 py-1 rounded-lg font-medium" id="date-span">
+        <span> 11:00 às 19:00 </span>
+    </div>
+
+  </div>
+
+</header>
+
+  <!-- FIM HEADER -->
+
+  <!-- INICIO DO CARDAPIO-->
+
+    <h2 class=" bg-black text-white  text-2xl md:text-3xl font-extrabold text-center mt-2.5 mb-9">
+       CONHEÇA NOSSO MENU 
+    </h2>
+
+    <!--FIM DO CARDAPIO HAMBURGUERES -->
+    <h2 class=" bg-amber-600 px-4 py-1 rounded-lg font-extrabold text-2xl md:text-3xl  text-center mt-6 mb-6"> 
+        HAMBÚRGUER
+    </h2>
+
+
+
+  
+
+    <!-- INICIO MENU HAMBURGUER  -->
+
+     <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--PRODUTO ITEM -->
+            
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Old King.avif"
+                alt="Burger Old King"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Old King </p>
+                    <p class="text-sm"> Viva a experiência do 'Old King'! Este burguer dominante apresenta um pão prime selado na manteiga. 
+                        um generoso blend de 150g, harmonizado perfeitamente com a combinação divina de queijo mussarela suave e coalho vibrante.
+                        A frescura do alface e do tomate contrasta com o toque agridoce dos picles, criando uma sinfonia de sabores.
+                        Acrescentamos ainda fatias de bacon crocante, preparadas à perfeição, e cebola caramelizada, que traz um requinte adicional.
+                         Para finalizar, é regado com nosso encorpado molho barbecue. Um verdadeiro banquete digno de um rei!
+                    </p>
+                    <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$48.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Old King"
+                            data-price="48.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Old Melt.jpg"
+                alt="Burger Old Melt"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Old Melt </p>
+                    <p class="text-sm"> Pão australiano selado na manteiga, maionese cada,
+                         1 smash com queijo cheddar cremoso e para finalizar, farofa de Bacon crocante.
+                    </p>
+                    <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$39.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Old Melt"
+                            data-price="39.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Old Pepper.avif"
+                alt="Burger Old Pepper"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Old Pepper </p>
+                    <p class="text-sm"> Pão de pimenta selado na manteiga, blend de 150g, queijo mussarela,
+                                         queijo coalho com geleia de pimenta, fatias de bacon e molho barbecue.                    </p>
+                    <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$46.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Old Pepper"
+                            data-price="46.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Old smash cheddar.jpg"
+                alt="Burger Old smash cheddar"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Old smash cheddar </p>
+                    <p class="text-sm"> Pão de brioche gold selado na manteiga, 1 smash de 75g,
+                                         duas fatias de queijo cheddar mais nosso molho especial da casa.                    </p>
+                    <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$25.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Old Melt"
+                            data-price="25.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+        
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Old Smash Salad.jpg"
+                alt="Burger Old smash salad"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Old Smash Salad </p>
+                    <p class="text-sm">  Adentre no universo do sabor com nossa 'Old Smash Salad'.
+                                         A base dessa delícia é o irresistível pão de brioche, cuidadosamente selado na manteiga
+                                         para obter uma crocância perfeita. O prato revela um suculento smash, coberto por uma de camada de queijo cheddar derretido. Acompanhando,
+                                         a frescura do alface e a suculência do tomate, juntamente com o crocante dos picles e a picância da cebola crua. Para finalizar, a nossa maionese especial, segredo da casa.   
+                                         </p>
+                    <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$28.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Old Smash Salad"
+                            data-price="28.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Smash Bacon Duplo.jpg"
+                alt="Burger Smash Bacon Duplo"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Smash Bacon Duplo </p>
+                    <p class="text-sm"> Old Smash Bacon, Versão Dupla. Pão de brioche, cuidadosamente selado na manteiga 
+                                        para um toque extra de sabor. Conta com Dois smash de carne selecionada. 
+                                         Acompanha uma generosa camada de queijo cheddar derretido, que se une a crocantes fatias de bacon.
+                                        Para finalizar A cebola caramelizada, adocicada e suave, agrega um contraponto perfeito.
+                                         Finalizando, temos a exclusiva e irresistível maionese especial da casa. 
+                                         Uma escolha imperdível para os amantes de um bom hambúrguer.                    </p>
+                    <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$40.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Smash Bacon Duplo"
+                            data-price="40.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Smash Bacon.jpg"
+                alt="Burger Smash Bacon"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Smash Bacon </p>
+                    <p class="text-sm"> Smash Bacon. Pão de brioche, cuidadosamente selado na manteiga para um toque extra de sabor. Conta com um smash de carne selecionada. Acompanha uma generosa camada de queijo cheddar derretido, que se une a crocantes fatias de bacon. Para finalizar A cebola caramelizada, adocicada e suave, agrega um contraponto perfeito. Finalizando, temos a exclusiva e irresistível maionese especial da casa. Uma escolha imperdível para os amantes de um bom hambúrguer.             
+                   <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$31.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Smash Bacon"
+                            data-price="31.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Smash Gorgonzola.jpg"
+                alt="Burger Smash Gorgonzola"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Smash Gorgonzola </p>
+                    <p class="text-sm"> Pão de brioche selado, 1 smash com fatia de queijo gorgonzola, picles, cebola caramelizada e molho especial da casa.                   </p>
+                    <span class="text-black py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$30.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Smash Gorgonzola"
+                            data-price="30.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Smash Mussarela.jpg"
+                alt="Burger Smash Mussarela"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Smash Mussarela </p>
+                    <p class="text-sm"> Pão de brioche gold selado na manteiga, 1 smash com fatias de queijo mussarela derretido mais nosso molho especial da casa.
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$25.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Smash Mussarela"
+                            data-price="25.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/hamburgues/Burger Supreme.avif"
+                alt="Burger Supreme"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Burger Supreme </p>
+
+                    <p class="text-sm"> Pão de parmesão selado na manteiga, blend de 150gm queijo gorgonzola, fatias de bacon, cebola caramelizada e maionese especial da casa.
+                 </p>
+
+                    <span class="text-black py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$41.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Burger Supreme"
+                            data-price="41.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+
+
+        </main>
+
+<!-- FIM MENU AMBURGUE -->
+
+<!-- INICIO MENU COMBOS -->
+
+      <h2 class=" bg-amber-600 px-4 py-1 rounded-lg font-extrabold text-2xl md:text-3xl  text-center mt-9 mb-6"> 
+        COMBOS ESPECIAIS DA CASA 
+    </h2>
+
+
+       <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--PRODUTO ITEM -->
+            
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/smash cheddar + bebida + batata.avif"
+                alt="Smash cheddar + bebida + batata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Smash cheddar + bebida + batata </p>
+
+                     <p class="text-sm"> Pão de brioche gold selado na manteiga, 1 smash com duas fatias de queijo cheddar derretido mais nosso molho especial da casa.
+                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                   
+                                        
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$43,90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Smash cheddar + bebida + batata"
+                            data-price="43,90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/Smash mussarela + bebida + batata 1.png"
+                alt="Chá Matte Limão Leão 300ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Smash mussarela + bebida + batata </p>
+                    
+                    <p class="text-sm"> Pão de brioche gold selado na manteiga, 1 smash com queijo mussarela derretido mais nosso molho especial da casa.
+Acompanha bebida e batata
+                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$43,90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Smash mussarela + bebida + batata"
+                            data-price="43,90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/Smash Bacon duplo   coca cola  batata.jpg"
+                alt="Smash Bacon duplo + coca cola + batata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Smash Bacon duplo + coca cola + batata </p>
+
+                           <p class="text-sm"> Pão de brioche gold selado na manteiga, 2 smash de 75g com 4 fatias de queijo cheddar, 2 fatias de bacon, cebola caramelizada e molho especial da casa.
+                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$58,90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Smash Bacon duplo + coca cola + batata"
+                            data-price="58,90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/Combo Old Melt.avif"
+                alt="Combo Old Melt"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                      
+                    <p class="font-bold">Combo Old Melt </p>
+
+                           <p class="text-sm">                           
+                            Combo Old Melt + batata crinkle + bebida
+Pão australiano selado na manteiga, maionese casa, 1 smash com queijo cheddar cremoso e para finalizar, farofa de Bacon crocante.
+                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$56,90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo Old Melt"
+                            data-price="56,90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+        
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/Combo Old supreme.jpg"
+                alt="Combo Old supreme"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Combo Old supreme </p>
+
+                          <p class="text-sm">                           
+                           Pão de parmesão selado na manteiga, blend de 150g, queijo gorgonzola, fatias de bacon, cebola caramelizada e maionese especial da casa.                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                                       
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 58,90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo Old supreme"
+                            data-price=" 58,90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/Combo Old Pepper.avif"
+                alt="Combo Old Pepper"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Combo Old Pepper</p>
+                                
+                     <p class="text-sm">                           
+Pão de pimenta selado na manteiga, blend de 150g, queijo mussarela, queijo coalho com geleia de pimenta, fatias de bacon e molho barbecue.
+
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$63,90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo Old Pepper"
+                            data-price="63,90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/Combo Old King.avif"
+                alt="Combo Old King"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Combo Old King </p>
+                   
+                    <p class="text-sm">                           
+Viva a experiência do 'Old King'! Este burguer dominante apresenta um pão prime selado na manteiga. Ostenta um generoso blend de 150g, harmonizado perfeitamente com a combinação divina de queijo mussarela suave e coalho vibrante. A frescura do alface e do tomate contrasta com o toque agridoce dos picles, criando uma sinfonia de sabores. Acrescentamos ainda fatias de bacon crocante, preparadas à perfeição, e cebola caramelizada, que traz um requinte adicional. Para finalizar, é regado com nosso encorpado molho barbecue. Um verdadeiro banquete digno de um rei!
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$65.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo Old King"
+                            data-price="65.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/Smash bacon + bebida + batata.avif"
+                alt="Smash bacon + bebida + batata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Smash bacon + bebida + batata </p>
+
+                                        <p class="text-sm">                           
+Old Smash Bacon. Pão de brioche, cuidadosamente selado na manteiga para um toque extra de sabor. Conta com um smash de carne selecionada. Acompanha uma generosa camada de queijo cheddar derretido, que se une a crocantes fatias de bacon. Para finalizar A cebola caramelizada, adocicada e suave, agrega um contraponto perfeito. Finalizando, temos a exclusiva e irresistível maionese especial da casa. Uma escolha imperdível para os amantes de um bom hambúrguer.
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                   
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 49.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Smash bacon + bebida + batata"
+                            data-price=" 49.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/combos especiais/Smash gorgonzola + bebida + batata.avif"
+                alt="Smash gorgonzola + bebida + batata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Smash gorgonzola + bebida + batata </p>
+                               
+                      <p class="text-sm">                           
+Pão brioche gold selado, 1 smash com queijo gorgonzola, picles, cebola caramelizada e maionese especial da casa.
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$48.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Smash gorgonzola + bebida + batata"
+                            data-price="48.90"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+
+
+        </main>
+
+<!--fIM MENU COMBOS -->
+
+<!--INICIO MENU POÇOES E PETISCOS -->
+
+  <h2 class=" bg-amber-600 px-4 py-1 rounded-lg font-extrabold text-2xl md:text-3xl  text-center mt-9 mb-6"> 
+        PORÇÕES E PETICOS 
+    </h2>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--PRODUTO ITEM -->
+            
+            <div class="flex gap-2">
+                <img
+                src="./assets/porçoes/Porção de Batata Crinkle.avif"
+                alt="Porção de Batata Crinkle"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Porção de Batata Crinkle </p>
+
+                     <p class="text-sm"> 
+Batata Crinckle sequinha, crocante e deliciosa. Porção individual.
+                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                   
+                                        
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$14,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Porção de Batata Crinkle"
+                            data-price="14,00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/porçoes/Anéis de cebola.avif"
+                alt="Anéis de cebola"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Anéis de cebola</p>
+                    
+                    <p class="text-sm">
+                        um petisco crocante e saboroso, feito com cebolas em formato de anel, empanadas e fritas
+                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$19,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Anéis de cebola"
+                            data-price="19,00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/porçoes/Dadinho De Tapioca Com Queijo.avif"
+                alt="Dadinho De Tapioca Com Queijo"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Dadinho De Tapioca Com Queijo </p>
+
+                           <p class="text-sm">
+                        Feito com queijo coalho, tapioca e a mistura exata de temperos. 
+                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$27.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Dadinho De Tapioca Com Queijo"
+                            data-price="27.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/porçoes/Batata Big crazy.avif"
+                alt="Batata crazy"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                      
+                    <p class="font-bold">Batata crazy </p>
+
+                           <p class="text-sm">                           
+Nossa batata com duas camadas de queijo cheddar cremoso e farofa de bacon. Perfeito para dividir.
+                 </p>
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$26.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Batata crazy"
+                            data-price="526.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+        
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/porçoes//Batata Big crazy.avif"
+                alt="Batata Big crazy"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Batata Big crazy </p>
+
+                          <p class="text-sm">                           
+               Batata frita Crinkle com bacon e cheddar
+              <span class="text-black  py-1 rounded-lg font-medium px-4  mt-4">Serve 1 pessoa </span>
+
+                                       
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 32.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Batata Big crazy"
+                            data-price=" 32.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+
+
+
+        </main>
+    
+
+<!--FIM MENU POCOES E PETICOS -->
+
+ <!--INICIO MENU BEBIDAS -->
+        <h2 class=" bg-amber-600 px-4 py-1 rounded-lg font-extrabold text-2xl md:text-3xl  text-center mt-9 mb-6"> 
+        BEBIDAS
+    </h2>
+          <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--PRODUTO ITEM -->
+            
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/Chá Matte Leão Original 300ml.png"
+                alt="Chá Matte Leão Original 300ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Chá Matte Leão Original 300ml </p>
+                   
+                                        
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Chá Matte Leão Original 300ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/Chá Matte Limão Leão 300ml.png"
+                alt="Chá Matte Limão Leão 300ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Chá Matte Limão Leão 300ml </p>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Chá Matte Limão Leão 300ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/coca zero.png"
+                alt="Refrigerante Coca Cola Zero Lata 350ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Refrigerante Coca Cola Zero Lata 350ml </p>
+                    
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Refrigerante Coca Cola Zero Lata 350ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/cocacola.png"
+                alt="Refrigerante Coca Cola 350ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Refrigerante Coca Cola 350ml </p>
+                   
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Refrigerante Coca Cola 350ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+        
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/fanta uva.png"
+                alt="Refrigerante Fanta Uva Lata 350ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Refrigerante Fanta Uva Lata 350ml </p>
+                                       
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Refrigerante Fanta Uva Lata 350ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/fanta.png"
+                alt="Refrigerante Laranja Lata 350ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Refrigerante Laranja Lata 350ml </p>
+                                
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Refrigerante Laranja Lata 350ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+            <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/guarana antartica zero.png"
+                alt="Refrigerante Guaraná Antarctica Sem Açúcar Lata 350ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Refrigerante Guaraná Antarctica Sem Açúcar Lata 350mln </p>
+                   
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Refrigerante Guaraná Antarctica Sem Açúcar Lata 350ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/guarana antartica.png"
+                alt="Refrigerante Guaraná Antarctica 350ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Refrigerante Guaraná Antarctica 350ml </p>
+                   
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Refrigerante Guaraná Antarctica 350ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                src="./assets/bebidas/refrigernate sprite lata 350ml.png"
+                alt="Refrigerante Sprite em Lata 350ml"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Refrigerante Sprite em Lata 350ml </p>
+                                  
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$8.00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Refrigerante Sprite em Lata 350ml"
+                            data-price="8.00"
+                            >
+                            
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- fIM PRODUTO ITEM-->
+
+
+
+        </main>
+
+
+<!-- FIM MENU MEBIDAS -->
+
+        
+
+
+     </div>
+     <!-- FIM MENU -->
+</body>
+</html>

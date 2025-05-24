@@ -1,0 +1,11 @@
+@import "tailwindcss";
+ /* Utilities por último */
+
+/* Estilo customizado opcional */
+.bg-home {
+  background-image: url('../assets/bg.jpg');
+}
+
+body {
+  background-color: #f6f7f8;
+}
