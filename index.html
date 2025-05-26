@@ -5,58 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Senex Burger</title>
 
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet"/>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="./styles/output.css" rel="stylesheet" />
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-
+  <!-- CSS Local -->
+  <link href="./styles/output.css" rel="stylesheet" />
 </head>
+
 <body class="bg-[#f6f7f8]">
-  <!-- HEADER -->
-  <header class="relative w-full h-[420px] bg-home bg-cover bg-center">
 
-  <!-- overlay escuro -->
-  <div class="absolute inset-0 bg-zinc-900/20 z-0"></div>
+<!-- ================= HEADER ================= -->
+<header class="relative w-full h-[480px] bg-home bg-cover bg-center">
 
-  <!-- conteúdo -->
+  <!-- Overlay escuro -->
+  <div class="absolute inset-0 bg-zinc-900/40 z-0"></div>
 
-  
-  <div class="relative z-10 w-full h-full flex flex-col justify-center items-center  text-white">
+  <!-- Conteúdo -->
+  <div class="relative z-10 w-full h-full flex flex-col justify-center items-center text-white">
+
+    <!-- Logo -->
     <img
       src="./assets/Log/log.avif"
       alt="logo Senex Burger"
       class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
     />
 
-    <h1 class="text-5xl mt-4 mb-2 font-bold ">Senex Burger</h1>
+    <!-- Nome -->
+    <h1 class="text-5xl mt-4 mb-2 font-bold">Senex Burger</h1>
 
-    <span class="font-medium text-center px-4 ">
-      Foodtruck Rua Jaceguai, n7 (Pça Varnhagen).
-    </span>
-    <div class="bg-green-600 px-4 py-1 rounded-lg font-medium " id="date-span" >
-        <span id="status" >  </span>
-
-    </div>
-    
-
-
-    <span class="font-medium text-center px-4  mt-4 ">
-      As 3ª no Ed Ventura - Av. República do Chile 330.
-    </span>
-      
-            <div class="bg-green-600 px-4 py-1 rounded-lg font-medium" id="date-span1">
-        <span> 11:00 às 19:00           
+    <!-- Unidade Praça Varnhagen -->
+    <div class="flex flex-col items-center gap-2">
+      <span class="font-medium text-center px-4">
+        Foodtruck - Rua Jaceguai, nº7 (Pça Varnhagen)
+      </span>
+      <div class="flex items-center gap-2">
+        <div id="date-span" class="bg-green-600 px-4 py-1 rounded-lg font-medium text-white">
+          ABERTO
+        </div>
+        <span id="status" class="font-medium   px-4 py-1 rounded-lg">
+          Funcionamos de Quarta a Domingo das 19:00 às 01:00
         </span>
+      </div>
+    </div>
 
-  
-           </div>
+    <!-- Divider -->
+    <div class="h-px w-32 bg-white/30 my-2"></div>
+
+    <!-- Unidade Edifício Ventura -->
+    <div class="flex flex-col items-center gap-2">
+      <span class="font-medium text-center px-4">
+        Às Terças - Ed. Ventura - Av. República do Chile, 330
+      </span>
+      <div class="flex items-center gap-2">
+        <div id="date-span1" class="bg-green-600 px-4 py-1 rounded-lg font-medium text-white">
+          ABERTO
+        </div>
+        <span id="status2" class="font-medium px-4 py-1 rounded-lg">
+          Funcionamos Terça das 11:00 às 19:00
+        </span>
+      </div>
     </div>
 
   </div>
