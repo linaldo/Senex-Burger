@@ -176,72 +176,151 @@ checkoutBtn.addEventListener("click", function(){
 
 
 // Verificar se o restaurante está aberto - Quarta a Domingo das 19h às 01h
-// Verificar se o restaurante está aberto - Quarta a Domingo das 19h às 01h
 function checkRestaurantOpen() {
     const data = new Date();
-    const dia = data.getDay();  
+    const dia = data.getDay();  // 0 = Domingo, 1 = Segunda ... 6 = Sábado
     const hora = data.getHours();
 
-    const diaAberto = (dia >= 3 && dia <= 6) || dia === 0; 
-    const horaAberta = (hora >= 19) || (hora < 1);
+    // Verifica se está entre 19h e 23h59 no mesmo dia
+    const horarioNoturno = hora >= 19 && hora <= 23;
 
-    return diaAberto && horaAberta;
-}
+    // Verifica se está entre 00h e 01h (madrugada do dia seguinte)
+    const madrugada = hora >= 0 && hora < 1;
 
-// Verificar se o restaurante está aberto - Terça das 11h às 19h
-function checkRestaurantOpenTuesday() {
-    const data = new Date();
-    const dia = data.getDay();  
-    const hora = data.getHours();
+    // Se for entre quarta (3) e domingo (0)
+    const diaSemana = (dia >= 3 && dia <= 6);  // Quarta a Sábado
 
-    const diaAberto = dia === 2; 
-    const horaAberta = hora >= 11 && hora < 19;
+    // Madrugada de quinta (4), sexta (5), sábado (6) e domingo (0) até 01h da manhã
+    const diaMadrugadaValido = (dia >= 4 && dia <= 0) || dia === 0;
 
-    return diaAberto && horaAberta;
-}
-
-// Atualiza o status do funcionamento (Quarta a Domingo)
-function updateStatus() {
-    const statusDiv = document.getElementById('status');
-    const spanItem = document.getElementById("date-span");
-    const isOpen = checkRestaurantOpen();
-
-    if (isOpen) {
-        statusDiv.textContent = '4ª a Dom das 19:00 às 01:00 (Estamos aberto)';
-        spanItem.classList.remove("bg-red-500");
-        spanItem.classList.add("bg-green-600");
-    } else {
-        statusDiv.textContent = 'Estamos fechados. Funcionamos de 4ª a Dom das 19:00 às 01:00';
-        spanItem.classList.remove("bg-green-600");
-        spanItem.classList.add("bg-red-500");
+    if ((diaSemana && horarioNoturno) || (madrugada && (dia === 4 || dia === 5 || dia === 6 || dia === 0))) {
+        return true;
     }
 
-    statusDiv.classList.add('text-white',  'text-center');
+    // Verifica se é madrugada de segunda (01h) ainda do domingo
+    if (dia === 1 && madrugada) {
+        return false;
+    }
+
+    return false;
 }
 
-// Atualiza o status do funcionamento (Terça)
-function updateStatusTuesday() {
-    const spanItem1 = document.getElementById("date-span1");
-    const isOpen = checkRestaurantOpenTuesday();
 
-    if (isOpen) {
-        spanItem1.classList.remove("bg-red-500");
-        spanItem1.classList.add("bg-green-600");
+
+// Configuração dos horários
+
+
+// Unidade 1: Quarta a Domingo das 19h até 01h
+const horariosUnidade1 = [
+    { dias: [3, 4, 5, 6, 0], horarioInicio: 19, horarioFim: 1 }
+];
+
+// Unidade 2: Terça das 11h às 19h
+const horariosUnidade2 = [
+    { dias: [2], horarioInicio: 11, horarioFim: 19 }
+];
+
+
+// Função genérica para checar aberto
+
+
+function estaAberto(horarios) {
+    const agora = new Date();
+    const dia = agora.getDay();
+    const hora = agora.getHours();
+
+    for (const horario of horarios) {
+        if (horario.dias.includes(dia)) {
+            // Caso horário não passe da meia-noite
+            if (horario.horarioInicio < horario.horarioFim) {
+                if (hora >= horario.horarioInicio && hora < horario.horarioFim) {
+                    return true;
+                }
+            } else {
+                // Caso passe da meia-noite (ex.: 19h até 01h)
+                if (hora >= horario.horarioInicio || hora < horario.horarioFim) {
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
+}
+
+
+// Atualizar status Unidade 1
+
+
+function updateStatusUnidade1() {
+    const span = document.getElementById("date-span");
+    const statusDiv = document.getElementById("status");
+
+    const aberto = estaAberto(horariosUnidade1);
+
+    if (aberto) {
+        span.textContent = "ABERTO";
+        span.classList.remove("bg-red-500");
+        span.classList.add("bg-green-600");
+         statusDiv.classList.remove("bg-red-500");
+        statusDiv.classList.add("bg-green-600");
+        
+        statusDiv.textContent  = "Funcionamos de Quarta a Domingo das 19h às 01h.";
     } else {
-        spanItem1.classList.remove("bg-green-600");
-        spanItem1.classList.add("bg-red-500");
+        span.textContent = "FECHADO";
+        span.classList.remove("bg-green-600");
+        span.classList.add("bg-red-500");
+        statusDiv.classList.remove("bg-green-600");
+        statusDiv.classList.add("bg-red-500");
+
+        statusDiv.textContent = "Funcionamos de Quarta a Domingo das 19h às 01h.";
     }
 }
 
-// Atualiza assim que carregar
-updateStatus();
-updateStatusTuesday();
 
-// (Opcional) Se quiser atualizar automaticamente a cada minuto:
-setInterval(() => {
-    updateStatus();
-    updateStatusTuesday();
-}, 60000);
+// Atualizar status Unidade 2
+
+
+function updateStatusUnidade2() {
+    const span = document.getElementById("date-span1");
+    const statusDiv = document.getElementById("status2");
+    
+    const aberto = estaAberto(horariosUnidade2);
+
+    if (aberto) {
+        span.textContent = "ABERTO";
+        span.classList.remove("bg-red-500");
+        span.classList.add("bg-green-600");
+        statusDiv.classList.remove("bg-red-500");
+        statusDiv.classList.add("bg-green-600");
+
+        statusDiv.textContent = "Funcionamos Terça das 11h às 19h.";
+    } else {
+        span.textContent = "FECHADO";
+        span.classList.remove("bg-green-600");
+        span.classList.add("bg-red-500");
+        statusDiv.classList.remove("bg-green-600");
+        statusDiv.classList.add("bg-red-500");
+
+        statusDiv.textContent = "Funcionamos Terça das 11h às 19h.";
+    }
+}
+
+
+// Inicializar e atualizar periodicamente
+
+
+function atualizarTodosStatus() {
+    updateStatusUnidade1();
+    updateStatusUnidade2();
+}
+
+// Atualiza ao carregar
+atualizarTodosStatus();
+
+// Atualiza a cada 1 minuto
+setInterval(atualizarTodosStatus, 60000);
+
 
 
 
