@@ -175,6 +175,51 @@ checkoutBtn.addEventListener("click", function(){
 })
 
 
+//finalizar pedido 
+
+checkoutBtn.addEventListener("click", function(){
+
+    const isOpen= checkRestaurantOpen();
+   if(!isOpen){
+      Toastify({
+  text: "Estamos fechados ",
+  duration: 3000,
+  close: true,
+  gravity: "top", // `top` or `bottom`
+  position: "right", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "#ef4444",
+  },
+  onClick: function(){} // Callback after click
+}).showToast();
+    return;
+    }
+
+    if(cart.length === 0) return;
+    if(addressInput.value===""){
+        addressWarn.classList.remove("hidden")
+        addressInput.classList.add("border-red-500")
+        return;
+    }
+
+    //Enviar o pedido para api whats
+
+    const cartItems = cart.map((item) => {
+        return(
+            `${item.name} quantidade: (${item.quantity}) preço:R$ ${item.price}|` 
+        )
+    }).join("")
+    const message = encodeURIComponent(cartItems)
+    const phone = "+5581992902397"
+
+    window.open(`https://wa.me/${phone}?text=${message} endereço: ${addressInput.value}`, "_blank")
+
+    cart = [];
+    updateCartModal();
+
+})
+
 // Verificar se o restaurante está aberto - Quarta a Domingo das 19h às 01h
 function checkRestaurantOpen() {
     const data = new Date();
@@ -206,9 +251,9 @@ function checkRestaurantOpen() {
 }
 
 
-
+// ==============================
 // Configuração dos horários
-
+// ==============================
 
 // Unidade 1: Quarta a Domingo das 19h até 01h
 const horariosUnidade1 = [
@@ -220,9 +265,9 @@ const horariosUnidade2 = [
     { dias: [2], horarioInicio: 11, horarioFim: 19 }
 ];
 
-
+// ==============================
 // Função genérica para checar aberto
-
+// ==============================
 
 function estaAberto(horarios) {
     const agora = new Date();
@@ -248,9 +293,9 @@ function estaAberto(horarios) {
     return false;
 }
 
-
+// ==============================
 // Atualizar status Unidade 1
-
+// ==============================
 
 function updateStatusUnidade1() {
     const span = document.getElementById("date-span");
@@ -264,7 +309,7 @@ function updateStatusUnidade1() {
         span.classList.add("bg-green-600");
          statusDiv.classList.remove("bg-red-500");
         statusDiv.classList.add("bg-green-600");
-        
+
         statusDiv.textContent  = "Funcionamos de Quarta a Domingo das 19h às 01h.";
     } else {
         span.textContent = "FECHADO";
@@ -277,9 +322,9 @@ function updateStatusUnidade1() {
     }
 }
 
-
+// ==============================
 // Atualizar status Unidade 2
-
+// ==============================
 
 function updateStatusUnidade2() {
     const span = document.getElementById("date-span1");
@@ -306,9 +351,9 @@ function updateStatusUnidade2() {
     }
 }
 
-
+// ==============================
 // Inicializar e atualizar periodicamente
-
+// ==============================
 
 function atualizarTodosStatus() {
     updateStatusUnidade1();
