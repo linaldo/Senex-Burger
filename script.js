@@ -310,7 +310,7 @@ function updateStatusUnidade1() {
          statusDiv.classList.remove("bg-red-500");
         statusDiv.classList.add("bg-green-600");
 
-        statusDiv.textContent  = "Funcionamos de Quarta a Domingo das 19h às 01h.";
+        statusDiv.textContent  = "De Quarta a Domingo das 19h às 01h.";
     } else {
         span.textContent = "FECHADO";
         span.classList.remove("bg-green-600");
@@ -339,7 +339,7 @@ function updateStatusUnidade2() {
         statusDiv.classList.remove("bg-red-500");
         statusDiv.classList.add("bg-green-600");
 
-        statusDiv.textContent = "Funcionamos Terça das 11h às 19h.";
+        statusDiv.textContent = "Toda Terça das 11h às 19h.";
     } else {
         span.textContent = "FECHADO";
         span.classList.remove("bg-green-600");
@@ -347,7 +347,7 @@ function updateStatusUnidade2() {
         statusDiv.classList.remove("bg-green-600");
         statusDiv.classList.add("bg-red-500");
 
-        statusDiv.textContent = "Funcionamos Terça das 11h às 19h.";
+        statusDiv.textContent = "Aberto toda Terça das 11h às 19h.";
     }
 }
 
